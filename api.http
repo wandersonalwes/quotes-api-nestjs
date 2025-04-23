@@ -1,0 +1,57 @@
+### Create a new category
+POST http://localhost:3000/category HTTP/1.1
+content-type: application/json
+
+{
+    "name": "foo"
+}
+
+### Get all categories
+GET http://localhost:3000/category
+
+### Get a category by ID
+GET http://localhost:3000/category/1
+
+### Update a category by ID
+PATCH http://localhost:3000/category/1
+content-type: application/json
+
+{
+    "name": "bar"
+}
+
+### Delete a category by ID
+DELETE http://localhost:3000/category/1
+
+### Create a new quote
+POST http://localhost:3000/quote HTTP/1.1
+content-type: application/json
+
+{
+    "text": "bar",
+    "categoryId": 2
+}
+
+### Get all quotes
+GET http://localhost:3000/quote
+
+### Get a quote by ID
+GET http://localhost:3000/quote/2
+
+### Update a quote by ID
+PATCH http://localhost:3000/quote/1
+content-type: application/json
+
+{
+    "text": "bar",
+    "categoryId": 2
+}
+
+### Delete a quote by ID
+DELETE http://localhost:3000/quote/1
+
+### Get all quotes by category ID
+GET http://localhost:3000/quote/category/2
+
+### Get a random quote
+GET http://localhost:3000/quote/random
